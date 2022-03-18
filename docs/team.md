@@ -2,12 +2,11 @@
 
 ## Members
 
-Eva Filipa da Silva Correia Carvalho - up202006379
-João Ricardo Alves - up202007614
-Marco André Rocha - up202004891
-Matilde Pinho Borges Sequeira - up202007623
-Ricardo André Araújo de Matos - up202007962
-...
+- Eva Filipa da Silva Correia Carvalho - up202006379
+- João Ricardo Alves - up202007614
+- Marco André Rocha - up202004891
+- Matilde Pinho Borges Sequeira - up202007623
+- Ricardo André Araújo de Matos - up202007962
 
 # Product Name
 ...
