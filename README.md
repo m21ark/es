@@ -6,7 +6,7 @@ You can find here detailed about the product, from a high-level vision to low-le
 
 * Business modeling 
   * [Product Vision](docs/ProductVision.md)
-  * [Elevator Pitch]
+  * [Elevator Pitch](docs/ElevatorPitch.md)
 * [Requirements](requirements.md)
   * [Use Case Model](https://github.com/LEIC-ES-2021-22/templates/blob/main/docs/requirements.md#Use-case-model)
   * [Domain model](https://github.com/LEIC-ES-2021-22/templates/blob/main/docs/requirements.md#Domain-model)

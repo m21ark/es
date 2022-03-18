@@ -1,5 +1,5 @@
 
-## Requirements
+## Requirements (only template for now)
 
 In this section, you should describe all kinds of requirements for your module: functional and non-functional requirements.
 

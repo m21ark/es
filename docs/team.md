@@ -8,20 +8,34 @@
 - Matilde Pinho Borges Sequeira - up202007623
 - Ricardo André Araújo de Matos - up202007962
 
-# Product Name
-...
+## Product Name
+### UniErasmus
 
+<br>
 
 ## Vision Stament
 
-To do (see the Product vision template here: https://uxstudioteam.com/ux-blog/product-vision/)
+Is it difficult for you to find help about Erasmus programs? UniErasmus will make it easier and more fun than endlessly scrolling hundreds or thousands of pages, you just need a phone a finger and we'll do the magic.
+
+<br>
 
 ## Main Features
 
- - Feature 1 - Short description
- - Feature 2 - Short description
-...
+### Ingoing
+ - Find other Erasmus students
+ - Discover Porto
+
+### Outgoing
+ - Show destination options
+ - University and City Reviews
+ - Paperwork 
+ - Lodging
+ 
+### Other low priority features
+ - Include foreign exchange students from other mobility projects
+
+<br>
 
 ## Required API's
 
-- Student timetable from sigarra
+- Erasmus tables from Sigarra 
