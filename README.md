@@ -1,8 +1,8 @@
-_[your product name]_ Development Report
+UniErasmus Development Report
 
-Welcome to the documentation pages of the _[your product name]_!
+Welcome to the documentation pages of the UniErasmus!
 
-You can find here detailed about the product (or mini-app or module), from a high-level vision to low-level implementation decisions, a kind of Software Development Report, organized by discipline (as of RUP): 
+You can find here detailed about the product, from a high-level vision to low-level implementation decisions, a kind of Software Development Report, organized by discipline (as of RUP): 
 
 * Business modeling 
   * [Product Vision](docs/ProductVision.md)

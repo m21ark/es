@@ -3,6 +3,11 @@
 
 In this section, you should describe all kinds of requirements for your module: functional and non-functional requirements.
 
+
+### User case stories
+
+* 
+
 ### Use case model 
 
 Create a use-case diagram in UML with all high-level use cases possibly addressed by your module, to clarify the context and boundaries of your application.
