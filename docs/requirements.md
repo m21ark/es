@@ -14,6 +14,46 @@ Create a use-case diagram in UML with all high-level use cases possibly addresse
 
 Give each use case a concise, results-oriented name. Use cases should reflect the tasks the user needs to be able to accomplish using the system. Include an action verb and a noun. 
 
+
+### Find other Erasmus students
+|||
+| --- | --- |
+| *Name* | Find other Erasmus students |
+| *Actor* |  Student | 
+| *Description* | The user can find other Erasmus students in the same city or university as him |
+| *Preconditions* | - The user needs to register as an Erasmus student in the app. |
+| *Postconditions* | - The user can see a list of the other students and check some information regarding them (email and name) |
+| *Normal flow* | 1. The user accesses the Erasmus section of the app.<br> 2. The system asks the user to confirm if he is indeed an Erasmus student, in case he hasn't accepted before. <br> 3. The system shows the list of other students. |
+| *Alternative flows and exceptions* | N/A |
+
+<br><br>
+
+### Show available universities
+
+|||
+| --- | --- |
+| *Name* | Show available universities |
+| *Actor* |  Student | 
+| *Description* | The user can search for a list/map of the available universities and check some informations about them. |
+| *Preconditions* | N/A |
+| *Postconditions* | - The user can see a list of the other students and check some information regarding them (email and name) |
+| *Normal flow* | 1. The user accesses the Erasmus section of the app.<br> 2. The system asks the user to confirm if he is indeed an Erasmus student, in case he hasn't accepted before. <br> 3. The system shows the list of other students. |
+| *Alternative flows and exceptions* | N/A |
+
+<br><br>
+
+### Discover cities' places of interest
+
+|||
+| --- | --- |
+| *Name* | Discover cities' places of interest |
+| *Actor* |  Student | 
+| *Description* | The student is presented a list of useful and historical places in a specific city |
+| *Preconditions* | The student is logged into the account |
+| *Postconditions* | N/A |
+| *Normal flow* | The student opens a city's page inside the app. Then a list with the most significant places in that city are shown with an image and some key information (like location) |
+| *Alternative flows and exceptions* | N/A |
+
 Example:
  <p align="center" justify="center">
   <img src="https://github.com/LEIC-ES-2021-22/templates/blob/main/images/UseCaseView.png"/>
