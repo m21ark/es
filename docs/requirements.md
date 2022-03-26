@@ -21,9 +21,9 @@ Give each use case a concise, results-oriented name. Use cases should reflect th
 | *Name* | Find other Erasmus students |
 | *Actor* |  Student | 
 | *Description* | The user can find other Erasmus students in the same city or university as him |
-| *Preconditions* | - The user needs to register as an Erasmus student in the app. |
-| *Postconditions* | - The user can see a list of the other students and check some information regarding them (email and name) |
-| *Normal flow* | 1. The user accesses the Erasmus section of the app.<br> 2. The system asks the user to confirm if he is indeed an Erasmus student, in case he hasn't accepted before. <br> 3. The system shows the list of other students. |
+| *Preconditions* | The user doesn't need to register as an Erasmus student in the app to use this feature, but only Erasmus students will appear on the list. |
+| *Postconditions* | N/A |
+| *Normal flow* | 1. The user accesses the Erasmus section of the app.<br> 2. The system asks the user to confirm if he is indeed an Erasmus student, in case he hasn't accepted before. <br> 3. The system shows the list of other students and some information regarding them. (email and name)|
 | *Alternative flows and exceptions* | N/A |
 
 <br><br>
@@ -36,8 +36,22 @@ Give each use case a concise, results-oriented name. Use cases should reflect th
 | *Actor* |  Student | 
 | *Description* | The user can search for a list/map of the available universities and check some informations about them. |
 | *Preconditions* | N/A |
-| *Postconditions* | - The user can see a list of the other students and check some information regarding them (email and name) |
-| *Normal flow* | 1. The user accesses the Erasmus section of the app.<br> 2. The system asks the user to confirm if he is indeed an Erasmus student, in case he hasn't accepted before. <br> 3. The system shows the list of other students. |
+| *Postconditions* | N/A |
+| *Normal flow* | 1. The user accesses the Erasmus section of the app.<br> 2. The system uses a map/list to show the universities. <br> 3. The system shows information about the university chosen. |
+| *Alternative flows and exceptions* | N/A |
+
+<br><br>
+
+### List necessary paperwork
+
+|||
+| --- | --- |
+| *Name* | List necessary paperwork |
+| *Actor* |  Student | 
+| *Description* | Student can read some synthetized information and get useful links to find more about how Erasmus works and what is needed |
+| *Preconditions* | N/A |
+| *Postconditions* | The student may leave the app and be taken into a 3rd party website |
+| *Normal flow* | A student can see some basic information about how Erasmus works. If it wants to learn more, some links are provided that take the user to the adequated sites. |
 | *Alternative flows and exceptions* | N/A |
 
 <br><br>
