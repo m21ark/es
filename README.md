@@ -8,9 +8,9 @@ You can find here detailed about the product, from a high-level vision to low-le
   * [Product Vision](docs/ProductVision.md)
   * [Elevator Pitch](docs/ElevatorPitch.md)
 * [Requirements](requirements.md)
-  * [Use Case Model](https://github.com/LEIC-ES-2021-22/templates/blob/main/docs/requirements.md#Use-case-model)
-  * [Domain model](https://github.com/LEIC-ES-2021-22/templates/blob/main/docs/requirements.md#Domain-model)
-  * [User stories](https://github.com/LEIC-ES-2021-22/templates/blob/main/docs/requirements.md#User-stories)
+  * [Use Case Model](docs/requirements.md)
+  * [Domain model](docs/requirements.md)
+  * [User stories](docs/requirements.md)
 * [Architecture and Design]
   * [Logical architecture]
   * [Physical architecture]
