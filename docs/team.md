@@ -9,13 +9,13 @@
 - Ricardo André Araújo de Matos - up202007962
 
 ## Product Name
-### UniErasmus
+### Erasmus Unite
 
 <br>
 
 ## Vision Stament
 
-Is it difficult for you to find help about Erasmus programs? UniErasmus will make it easier and more fun than endlessly scrolling hundreds or thousands of pages, you just need a phone a finger and we'll do the magic.
+Is it difficult for you to find help about Erasmus programs? Erasmus Unite will make it easier and more fun than endlessly scrolling hundreds or thousands of pages, you just need a phone a finger and we'll do the magic.
 
 <br>
 
