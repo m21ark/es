@@ -29,12 +29,12 @@ class ErasmusPageViewState extends GeneralPageViewState {
                   top: queryData.size.width / 12,
                   bottom: queryData.size.width / 12),
               child: Column(children: <Widget>[
-                Text("CREDITOS: \n\n", textScaleFactor: 1.5,),
-                Text("Eva Filipa Silva Correia Carvalho - up202006379\n\n"
-                    "João Ricardo Alves - up202007614\n\n"
-                    "Marco André Rocha - up202004891\n\n"
-                    "Matilde Pinho Borges Sequeira - up202007623\n\n"
-                    "Ricardo André Araújo de Matos - up202007962")
+                Text('CREDITOS: \n\n', textScaleFactor: 1.5,),
+                Text('Eva Filipa Silva Correia Carvalho - up202006379\n\n'
+                    'João Ricardo Alves - up202007614\n\n'
+                    'Marco André Rocha - up202004891\n\n'
+                    'Matilde Pinho Borges Sequeira - up202007623\n\n'
+                    'Ricardo André Araújo de Matos - up202007962')
               ]),
             ))
       ],
