@@ -4,7 +4,7 @@
 ## Vision Statement
 
 <p> This app aims to provide support to foreign exchange students, part of the Erasmus Project. The app will have features for both out going and in going students, in a simple and organized way. </p>
-<p> Currently, students have to go through a lot of trouble to be able to accomplish their incredible dream of becoming an Erasmus student. UniErasmus will provide them with all necessary tools to make it easier.</p>
+<p> Currently, students have to go through a lot of trouble to be able to accomplish their incredible dream of becoming an Erasmus student. Erasmus Unite will provide them with all necessary tools to make it easier.</p>
 <p> Unlike Sigarra, and other university websites, that have large amounts of confusing and unorganized information, our app gathers all essential knowledge about this exchange program in one place, making it suuuuuper easy to become an International student! </p>
 
 <br>
