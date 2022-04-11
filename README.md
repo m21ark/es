@@ -4,16 +4,17 @@ Welcome to the documentation pages of the Erasmus Unite!
 
 You can find here detailed about the product, from a high-level vision to low-level implementation decisions, a kind of Software Development Report, organized by discipline (as of RUP): 
 
-* Business modeling 
+
+* Business modeling
   * [Product Vision](docs/ProductVision.md#product-vision)
   * [Elevator Pitch](docs/ElevatorPitch.md#elevator-pitch)
-* [Requirements](docs/requirements.md)
+* Requirements
   * [Use Case Model](docs/requirements.md#use-case-model)
   * [Domain model](docs/requirements.md#domain-model)
   * [UI Mockup](docs/requirements.md#ui-mockup)
-* [Architecture and Design]
-  * [Logical architecture]
-  * [Physical architecture]
+* Architecture and Design
+  * [Logical architecture](docs/ArchitectureAndDesign.md#logical-architecture)
+  * [Physical architecture](docs/ArchitectureAndDesign.md#physical-architecture)
   * [Prototype]
 * [Implementation]
 * [Test]
@@ -32,7 +33,4 @@ Thank you!
 
 # Team 
 * [Team](docs/team.md)
-
-
----
 
