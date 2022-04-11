@@ -15,7 +15,7 @@ You can find here detailed about the product, from a high-level vision to low-le
 * Architecture and Design
   * [Logical architecture](docs/ArchitectureAndDesign.md#logical-architecture)
   * [Physical architecture](docs/ArchitectureAndDesign.md#physical-architecture)
-  * [Prototype]
+  * [Prototype](docs/ArchitectureAndDesign.md#vertical-prototype)
 * [Implementation]
 * [Test]
 * [Configuration and change management]
