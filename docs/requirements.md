@@ -1,65 +1,6 @@
 ## Requirements
 ### Use case model 
 
-Create a use-case diagram in UML with all high-level use cases possibly addressed by your module, to clarify the context and boundaries of your application.
-
-Give each use case a concise, results-oriented name. Use cases should reflect the tasks the user needs to be able to accomplish using the system. Include an action verb and a noun. 
-
-
-### Find other Erasmus students
-|||
-| --- | --- |
-| *Name* | Find other Erasmus students |
-| *Actor* |  Student | 
-| *Description* | The user can find other Erasmus students in the same city or university as him |
-| *Preconditions* | The user doesn't need to register as an Erasmus student in the app to use this feature, but only Erasmus students will appear on the list. |
-| *Postconditions* | N/A |
-| *Normal flow* | 1. The user accesses the Erasmus section of the app.<br> 2. The system asks the user to confirm if he is indeed an Erasmus student, in case he hasn't accepted before. <br> 3. The system shows the list of other students and some information regarding them. (email and name)|
-| *Alternative flows and exceptions* | N/A |
-
-<br><br>
-
-### Show available universities
-
-|||
-| --- | --- |
-| *Name* | Show available universities |
-| *Actor* |  Student | 
-| *Description* | The user can search for a list/map of the available universities and check some informations about them. |
-| *Preconditions* | N/A |
-| *Postconditions* | N/A |
-| *Normal flow* | 1. The user accesses the Erasmus section of the app.<br> 2. The system uses a map/list to show the universities. <br> 3. The system shows information about the university chosen. |
-| *Alternative flows and exceptions* | N/A |
-
-<br><br>
-
-### List necessary paperwork
-
-|||
-| --- | --- |
-| *Name* | List necessary paperwork |
-| *Actor* |  Student | 
-| *Description* | Student can read some synthetized information and get useful links to find more about how Erasmus works and what is needed |
-| *Preconditions* | N/A |
-| *Postconditions* | The student may leave the app and be taken into a 3rd party website |
-| *Normal flow* | A student can see some basic information about how Erasmus works. If it wants to learn more, some links are provided that take the user to the adequated sites. |
-| *Alternative flows and exceptions* | N/A |
-
-<br><br>
-
-### Discover cities' places of interest
-
-|||
-| --- | --- |
-| *Name* | Discover cities' places of interest |
-| *Actor* |  Student | 
-| *Description* | The student is presented a list of useful and historical places in a specific city |
-| *Preconditions* | The student is logged into the account |
-| *Postconditions* | N/A |
-| *Normal flow* | The student opens a city's page inside the app. Then a list with the most significant places in that city are shown with an image and some key information (like location) |
-| *Alternative flows and exceptions* | N/A |
-
-
 <p align="center" justify="center">
   <img src="../images/Use_case_diagram.png"/>
 </p>
