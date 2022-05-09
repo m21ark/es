@@ -28,8 +28,19 @@ class NavigationDrawerState extends State<NavigationDrawer> {
       Constants.navSchedule: _onSelectPage,
       Constants.navExams: _onSelectPage,
       Constants.navStops: _onSelectPage,
+      Constants.navErasmusMain: _onSelectPage,
       Constants.navAbout: _onSelectPage,
       Constants.navBugReport: _onSelectPage,
+
+      // Temporary Drawer Pages
+      Constants.navErasmusPaperwork: _onSelectPage,
+      Constants.navErasmusUniversityPage: _onSelectPage,
+      Constants.navErasmusUniversityReview: _onSelectPage,
+      Constants.navErasmusMap: _onSelectPage,
+      Constants.navErasmusStudentsList: _onSelectPage,
+      Constants.navErasmusUniversitiesList: _onSelectPage,
+      Constants.navErasmusReviewList: _onSelectPage,
+      Constants.navErasmusAbout: _onSelectPage,
     };
   }
 

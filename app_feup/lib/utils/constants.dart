@@ -11,3 +11,14 @@ const navLogOut = 'Terminar sessão';
 const faculties = ['faup', 'fbaup', 'fcup', 'fcnaup', 'fadeup',
                   'fdup', 'fep', 'feup', 'ffup', 'flup', 'fmup',
                   'fmdup', 'fpceup', 'icbas'];
+
+// Erasmus Unite Page Constants
+const navErasmusMain = 'Erasmus Unite';
+const navErasmusPaperwork = 'Erasmus Paperwork';
+const navErasmusUniversityPage = 'Erasmus University Page';
+const navErasmusUniversityReview = 'Erasmus University Review';
+const navErasmusMap = 'Erasmus Map';
+const navErasmusAbout = 'Erasmus About';
+const navErasmusStudentsList = 'Erasmus Student List';
+const navErasmusUniversitiesList = 'Erasmus University List';
+const navErasmusReviewList = 'Erasmus Review List';

@@ -11,9 +11,18 @@ import 'package:uni/model/app_state.dart';
 import 'package:uni/redux/actions.dart';
 import 'package:uni/redux/reducers.dart';
 import 'package:uni/utils/constants.dart' as Constants;
+import 'package:uni/view/Pages/Erasmus/eramus_about_view.dart';
+import 'package:uni/view/Pages/Erasmus/eramus_review_list_view.dart';
+import 'package:uni/view/Pages/Erasmus/eramus_student_list_view.dart';
+import 'package:uni/view/Pages/Erasmus/eramus_uni_list_view.dart';
 import 'package:uni/view/Pages/about_page_view.dart';
 import 'package:uni/view/Pages/bug_report_page_view.dart';
 import 'package:uni/view/Pages/bus_stop_next_arrivals_page.dart';
+import 'package:uni/view/Pages/Erasmus/eramus_map_view.dart';
+import 'package:uni/view/Pages/Erasmus/eramus_page_view.dart';
+import 'package:uni/view/Pages/Erasmus/eramus_paperwork_view.dart';
+import 'package:uni/view/Pages/Erasmus/eramus_uni_page_view.dart';
+import 'package:uni/view/Pages/Erasmus/eramus_uni_review_view.dart';
 import 'package:uni/view/Pages/exams_page_view.dart';
 import 'package:uni/view/Pages/home_page_view.dart';
 import 'package:uni/view/Pages/logout_route.dart';
@@ -47,7 +56,7 @@ Future<void> main() async {
 }
 
 /// Manages the state of the app
-/// 
+///
 /// This class is necessary to track the app's state for
 /// the current execution
 class MyApp extends StatefulWidget {
@@ -104,6 +113,44 @@ class MyAppState extends State<MyApp> {
                     maintainState: false);
               case '/' + Constants.navLogOut:
                 return LogoutRoute.buildLogoutRoute();
+
+              // Erasmus Page Transitions
+
+              case '/' + Constants.navErasmusMain:
+                return PageTransition.makePageTransition(
+                    page: ErasmusMainPageView(), settings: settings);
+
+              case '/' + Constants.navErasmusPaperwork:
+                return PageTransition.makePageTransition(
+                    page: ErasmusPaperworkView(), settings: settings);
+
+              case '/' + Constants.navErasmusUniversityPage:
+                return PageTransition.makePageTransition(
+                    page: ErasmusUniversityPageView(), settings: settings);
+
+              case '/' + Constants.navErasmusUniversityReview:
+                return PageTransition.makePageTransition(
+                    page: ErasmusUniversityReviewView(), settings: settings);
+
+              case '/' + Constants.navErasmusMap:
+                return PageTransition.makePageTransition(
+                    page: ErasmusMapView(), settings: settings);
+
+              case '/' + Constants.navErasmusStudentsList:
+                return PageTransition.makePageTransition(
+                    page: ErasmusStudentListView(), settings: settings);
+
+              case '/' + Constants.navErasmusUniversitiesList:
+                return PageTransition.makePageTransition(
+                    page: ErasmusUniversityListView(), settings: settings);
+
+              case '/' + Constants.navErasmusReviewList:
+                return PageTransition.makePageTransition(
+                    page: ErasmusReviewListView(), settings: settings);
+
+              case '/' + Constants.navErasmusAbout:
+                return PageTransition.makePageTransition(
+                    page: ErasmusABoutView(), settings: settings);
             }
           }),
     );
