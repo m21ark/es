@@ -1,9 +1,10 @@
-Erasmus Unite Development Report
+# Erasmus Unite Development Report
 
 Welcome to the documentation pages of the Erasmus Unite!
 
-You can find here detailed about the product, from a high-level vision to low-level implementation decisions, a kind of Software Development Report, organized by discipline (as of RUP): 
+You can find here detailed about the product, from a high-level vision to low-level implementation decisions, a kind of Software Development Report, organized by discipline (as of RUP):
 
+## Topics
 
 * Business modeling
   * [Product Vision](docs/ProductVision.md#product-vision)
@@ -21,16 +22,18 @@ You can find here detailed about the product, from a high-level vision to low-le
 * [Configuration and change management]
 * [Project management]
 
+## Iteration Reports
 
+* [Iteration 1](docs/Iteration_1.md)
 
+## Contributions
 
 So far, contributions are exclusively made by the initial team, but we hope to open them to the community, in all areas and topics: requirements, technologies, development, experimentation, testing, etc.
 
-Please contact us! 
+Please contact us!
 
 Thank you!
 
+## Team
 
-# Team 
 * [Team](docs/team.md)
-
