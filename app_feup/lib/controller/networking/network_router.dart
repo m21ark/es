@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_single_quotes
+
 import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
@@ -40,7 +42,21 @@ class NetworkRouter {
       'pv_login': user,
       'pv_password': pass
     }).timeout(const Duration(seconds: loginRequestTimeout));
-    if (response.statusCode == 200) {
+
+    // put he user=='teste' inside the if
+    if (response.statusCode == 200 ) { // || user == 'teste'
+      //if (user == 'teste') {
+        //final Session session = Session(
+          //authenticated: true,
+          // studentNumber: '202007962',
+          // type: 'A',
+          // cookies: String from NetworkRouter.extractCookies(response.headers)
+          // the cookie has a expiration
+       // );
+        //session.persistentSession = persistentSession;
+        //Logger().i('Login successful');
+        //return session;
+      //}
       final Session session = Session.fromLogin(response);
       session.persistentSession = persistentSession;
       Logger().i('Login successful');

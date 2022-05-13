@@ -23,7 +23,7 @@ class ErasmusMainPageViewState extends GeneralPageViewState {
         Container(
             child: SvgPicture.asset(
           'assets/images/ni_logo.svg',
-          color: Theme.of(context).accentColor,
+          color: Theme.of(context).colorScheme.secondary,
           width: queryData.size.height / 10,
           height: queryData.size.height / 10,
         )),
@@ -38,13 +38,14 @@ class ErasmusMainPageViewState extends GeneralPageViewState {
             Text(
               'Erasmus Unite \n\n',
               textScaleFactor: 1.5,
+              key: Key('Erasmus Unite Title'),
             ),
             ErasmusNavigationCard('Students', 'Find other Erasmus students',
                 Constants.navErasmusStudentsList),
             ErasmusNavigationCard(
                 'Universities',
                 'Find info about Erasmus Universities',
-                Constants.navErasmusUniversityPage),
+                Constants.navErasmusMainUni),
             ErasmusNavigationCard(
                 'Paperwork',
                 'Find all you need to enroll in Erasmus',

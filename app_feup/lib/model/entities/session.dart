@@ -23,6 +23,7 @@ class Session {
   /// Creates a new instance from an HTTP response containing a JSON document.
   static Session fromLogin(dynamic response) {
     final responseBody = json.decode(response.body);
+
     if (responseBody['authenticated']) {
       return Session(
           authenticated: true,

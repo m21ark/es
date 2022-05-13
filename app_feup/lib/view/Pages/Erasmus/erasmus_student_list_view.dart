@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:uni/view/Pages/general_page_view.dart';
 
-class ErasmusMapView extends StatefulWidget {
+class ErasmusStudentListView extends StatefulWidget {
   @override
-  State<StatefulWidget> createState() => ErasmusMapViewState();
+  State<StatefulWidget> createState() => ErasmusStudentListViewState();
 }
 
 /// Manages the 'about' section of the app.
-class ErasmusMapViewState extends GeneralPageViewState {
+class ErasmusStudentListViewState extends GeneralPageViewState {
   @override
   Widget getBody(BuildContext context) {
     final MediaQueryData queryData = MediaQuery.of(context);
@@ -30,7 +30,7 @@ class ErasmusMapViewState extends GeneralPageViewState {
               bottom: queryData.size.width / 12),
           child: Column(children: <Widget>[
             Text(
-              'Erasmus map \n\n',
+              'Student list \n\n',
               textScaleFactor: 1.5,
             ),
             Text('TODO')

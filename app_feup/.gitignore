@@ -33,7 +33,7 @@ assets/env/*
 .flutter-plugins-dependencies
 
 ### Flutter ###
-# Flutter/Dart/Pub related
+# Flutter/Dart/Pub/Gherkin related
 **/doc/api/
 .dart_tool/
 .flutter-plugins
@@ -41,6 +41,7 @@ assets/env/*
 .pub-cache/
 .pub/
 build/
+test_report.json
 
 # Android related
 **/android/**/gradle-wrapper.jar

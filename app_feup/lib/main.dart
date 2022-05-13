@@ -4,25 +4,25 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:sentry_flutter/sentry_flutter.dart';
-import 'package:sentry/sentry.dart';
 import 'package:redux/redux.dart';
 import 'package:uni/controller/middleware.dart';
+import 'package:uni/model/erasmus/erasmus_paperwork_model.dart';
 import 'package:uni/model/app_state.dart';
 import 'package:uni/redux/actions.dart';
 import 'package:uni/redux/reducers.dart';
 import 'package:uni/utils/constants.dart' as Constants;
 import 'package:uni/view/Pages/Erasmus/eramus_about_view.dart';
-import 'package:uni/view/Pages/Erasmus/eramus_review_list_view.dart';
-import 'package:uni/view/Pages/Erasmus/eramus_student_list_view.dart';
-import 'package:uni/view/Pages/Erasmus/eramus_uni_list_view.dart';
+import 'package:uni/view/Pages/Erasmus/eramus_map_view.dart';
+import 'package:uni/view/Pages/Erasmus/eramus_page_view.dart';
+import 'package:uni/view/Pages/Erasmus/erasmus_review_list_view.dart';
+import 'package:uni/view/Pages/Erasmus/erasmus_student_list_view.dart';
+import 'package:uni/view/Pages/Erasmus/erasmus_uni_list_view.dart';
+import 'package:uni/view/Pages/Erasmus/erasmus_uni_main_view.dart';
 import 'package:uni/view/Pages/about_page_view.dart';
 import 'package:uni/view/Pages/bug_report_page_view.dart';
 import 'package:uni/view/Pages/bus_stop_next_arrivals_page.dart';
-import 'package:uni/view/Pages/Erasmus/eramus_map_view.dart';
-import 'package:uni/view/Pages/Erasmus/eramus_page_view.dart';
-import 'package:uni/view/Pages/Erasmus/eramus_paperwork_view.dart';
-import 'package:uni/view/Pages/Erasmus/eramus_uni_page_view.dart';
-import 'package:uni/view/Pages/Erasmus/eramus_uni_review_view.dart';
+import 'package:uni/view/Pages/Erasmus/erasmus_uni_page_view.dart';
+import 'package:uni/view/Pages/Erasmus/erasmus_uni_review_view.dart';
 import 'package:uni/view/Pages/exams_page_view.dart';
 import 'package:uni/view/Pages/home_page_view.dart';
 import 'package:uni/view/Pages/logout_route.dart';
@@ -120,9 +120,13 @@ class MyAppState extends State<MyApp> {
                 return PageTransition.makePageTransition(
                     page: ErasmusMainPageView(), settings: settings);
 
+              case '/' + Constants.navErasmusMainUni:
+                return PageTransition.makePageTransition(
+                    page: ErasmusMainUniView(), settings: settings);
+
               case '/' + Constants.navErasmusPaperwork:
                 return PageTransition.makePageTransition(
-                    page: ErasmusPaperworkView(), settings: settings);
+                    page: ErasmusPaperworkModel(), settings: settings);
 
               case '/' + Constants.navErasmusUniversityPage:
                 return PageTransition.makePageTransition(

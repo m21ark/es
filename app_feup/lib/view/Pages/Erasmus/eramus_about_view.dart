@@ -17,7 +17,7 @@ class ErasmusABoutViewState extends GeneralPageViewState {
         Container(
             child: SvgPicture.asset(
           'assets/images/ni_logo.svg',
-          color: Theme.of(context).accentColor,
+          color: Theme.of(context).colorScheme.secondary,
           width: queryData.size.height / 7,
           height: queryData.size.height / 7,
         )),
@@ -33,12 +33,11 @@ class ErasmusABoutViewState extends GeneralPageViewState {
               'Erasmus Unite About\n\n',
               textScaleFactor: 1.5,
             ),
-           Text(
+            Text(
               'CREDITOS: \n\n',
               textScaleFactor: 1.2,
             ),
-            Text('Eva Filipa Silva Correia Carvalho - up202006379\n\n'
-                'João Ricardo Alves - up202007614\n\n'
+            Text('João Ricardo Alves - up202007614\n\n'
                 'Marco André Rocha - up202004891\n\n'
                 'Matilde Pinho Borges Sequeira - up202007623\n\n'
                 'Ricardo André Araújo de Matos - up202007962'),
