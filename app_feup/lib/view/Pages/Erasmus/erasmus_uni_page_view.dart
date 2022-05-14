@@ -1,6 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:uni/view/Pages/Erasmus/star_evaluation_view.dart';
+import 'package:uni/view/Widgets/Erasmus/star_evaluation_view.dart';
 import 'package:uni/view/Pages/general_page_view.dart';
 import 'package:uni/utils/constants.dart' as Constants;
 import 'package:url_launcher/url_launcher.dart';
@@ -14,8 +14,7 @@ class ErasmusUniversityPageView extends StatefulWidget {
 
 /// Manages the 'about' section of the app.
 class ErasmusUniversityPageViewState extends GeneralPageViewState {
-  static UniversityItem university =
-      ErasmusAPI.getUniversity(0);
+  static UniversityItem university = ErasmusAPI.getUniversity(0);
 
   gotoErasmusUniReviewMake(BuildContext context) =>
       Navigator.pushNamed(context, '/' + Constants.navErasmusUniversityReview);
@@ -93,14 +92,14 @@ class ErasmusUniversityPageViewState extends GeneralPageViewState {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 StarContainer('Expenses', university.stars.expenses, 0),
-                StarContainer('Experience',  university.stars.experience, 20),
+                StarContainer('Experience', university.stars.experience, 20),
               ],
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 StarContainer('Knowledge', university.stars.knowledge, 0),
-                StarContainer('Country',  university.stars.country, 20),
+                StarContainer('Country', university.stars.country, 20),
               ],
             ),
             Row(

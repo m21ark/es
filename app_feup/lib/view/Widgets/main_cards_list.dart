@@ -5,6 +5,7 @@ import 'package:uni/model/app_state.dart';
 import 'package:uni/model/home_page_model.dart';
 import 'package:uni/redux/actions.dart';
 import 'package:uni/utils/constants.dart' as Constants;
+import 'package:uni/view/Widgets/Erasmus/erasmus_card.dart';
 import 'package:uni/view/Widgets/account_info_card.dart';
 import 'package:uni/view/Widgets/back_button_exit_wrapper.dart';
 import 'package:uni/view/Widgets/bus_stop_card.dart';
@@ -23,7 +24,9 @@ class MainCardsList extends StatelessWidget {
     FAVORITE_WIDGET_TYPE.printBalance: (k, em, od) =>
         PrintInfoCard.fromEditingInformation(k, em, od),
     FAVORITE_WIDGET_TYPE.busStops: (k, em, od) =>
-        BusStopCard.fromEditingInformation(k, em, od)
+        BusStopCard.fromEditingInformation(k, em, od),
+    FAVORITE_WIDGET_TYPE.erasmus: (k, em, od) =>
+        ErasmusCard.fromEditingInformation(k, em, od)
   };
 
   @override

@@ -97,8 +97,7 @@ class _ErasmusPaperworkModelState extends SecondaryPageViewState
             text: '1st call',
             style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold)),
         TextSpan(
-            text:
-                ' - January or February of the previous academic year '
+            text: ' - January or February of the previous academic year '
                 '(for 1st and 2nd semester)\n\n',
             style: TextStyle(color: Colors.black)),
         TextSpan(

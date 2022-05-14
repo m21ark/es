@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class UniversityStarEvaluation{
+class UniversityStarEvaluation {
   final int expenses;
   final int experience;
   final int knowledge;
   final int country;
 
-  UniversityStarEvaluation(this.expenses,
-      this.experience, this.knowledge, this.country);
+  UniversityStarEvaluation(
+      this.expenses, this.experience, this.knowledge, this.country);
 }
 
 class StarContainer extends StatelessWidget {
