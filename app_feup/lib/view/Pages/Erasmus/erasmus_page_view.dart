@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+
+import 'package:uni/model/erasmus/erasmus_db.dart';
+
 import 'package:uni/view/Pages/general_page_view.dart';
 import 'package:uni/utils/constants.dart' as Constants;
 
@@ -17,6 +20,9 @@ class ErasmusMainPageViewState extends GeneralPageViewState {
 
   @override
   Widget getBody(BuildContext context) {
+
+    ErasmusDB.fetchStudentInfo();
+
     final MediaQueryData queryData = MediaQuery.of(context);
     return ListView(
       children: <Widget>[

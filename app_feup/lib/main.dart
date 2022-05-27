@@ -5,6 +5,7 @@ import 'package:flutter_redux/flutter_redux.dart';
 import 'package:sentry_flutter/sentry_flutter.dart';
 import 'package:redux/redux.dart';
 import 'package:uni/controller/middleware.dart';
+import 'package:uni/model/erasmus/erasmus_db.dart';
 import 'package:uni/model/erasmus/erasmus_paperwork_model.dart';
 import 'package:uni/model/app_state.dart';
 import 'package:uni/redux/actions.dart';
@@ -44,6 +45,8 @@ SentryEvent beforeSend(SentryEvent event) {
 }
 
 Future<void> main() async {
+  await ErasmusDB.fetchData();
+
   OnStartUp.onStart(state);
   await SentryFlutter.init(
     (options) {

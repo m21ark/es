@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:uni/model/erasmus/universityItem.dart';
 import 'package:uni/utils/constants.dart' as Constants;
 
+import '../../../model/erasmus/universityReview.dart';
 import 'erasmus_nav_card.dart';
 
-class UniversityRows extends StatelessWidget {
-  final List<UniversityItem> items;
+class ReviewRows extends StatelessWidget {
+  final List<UniversityReview> items;
 
-  UniversityRows({
+  ReviewRows({
     Key key,
     @required this.items,
   }) : super(key: key);
@@ -25,21 +25,21 @@ class UniversityRows extends StatelessWidget {
         children: [
           Expanded(
               child: Column(
-            children: getUniversityRows(context),
+            children: getReviewRows(context),
           ))
         ],
       ),
     ));
   }
 
-  List<Widget> getUniversityRows(BuildContext context) {
+  List<Widget> getReviewRows(BuildContext context) {
     final List<Widget> widgets = [];
 
     items.forEach((element) async {
       widgets.add(
-        ErasmusUniversityCard(
+        ErasmusReviewCard(
           element,
-          Constants.navErasmusUniversityPage,
+          Constants.navErasmusReviewList,
         ),
       );
     });

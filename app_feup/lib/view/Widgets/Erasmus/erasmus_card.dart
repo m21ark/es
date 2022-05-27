@@ -1,12 +1,13 @@
 // ignore_for_file: unnecessary_new
 
 import 'package:flutter/material.dart';
-import 'package:uni/model/erasmus/erasmus_api.dart';
+import 'package:uni/model/erasmus/universityItem.dart';
+import 'package:uni/model/erasmus/erasmus_db.dart';
 import 'package:uni/utils/constants.dart' as Constants;
 import '../generic_card.dart';
 
 class ErasmusCard extends GenericCard {
-  final List<UniversityItem> unis = ErasmusAPI.getTop(3);
+  final List<UniversityItem> unis = ErasmusDB.getTop(3);
 
   ErasmusCard({Key key}) : super(key: key);
 
@@ -37,7 +38,7 @@ class ErasmusCard extends GenericCard {
       padding: EdgeInsets.fromLTRB(40, 15, 40, 15),
       width: 300,
       margin: EdgeInsets.all(8),
-      color: Colors.grey[200],
+      color: Colors.grey[100],
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
