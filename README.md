@@ -25,6 +25,7 @@ You can find here detailed about the product, from a high-level vision to low-le
 ## Iteration Reports
 
 * [Iteration 1](docs/Iteration_1.md)
+* [Iteration 2](docs/Iteration_2.md)
 
 ## Contributions
 
