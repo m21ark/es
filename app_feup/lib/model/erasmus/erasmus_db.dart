@@ -1,5 +1,6 @@
 import 'package:gsheets/gsheets.dart';
 import 'package:uni/controller/local_storage/app_shared_preferences.dart';
+import 'package:uni/model/erasmus/studentItem.dart';
 
 import 'package:uni/model/erasmus/universityItem.dart';
 import 'package:uni/model/erasmus/universityReview.dart';
@@ -22,12 +23,31 @@ const String _credentials = r'''
 
 const String _ssID = '1iSVLb8uXwG8-ke1BJSDHX8q5PLCuVd7VhqWjwu_I8SU';
 
+const int _idUnis = 0;
+const int _idReviews = 6996890;
+const int _idStudents = 1452015207;
+
 class ErasmusDB {
   static final _gsheets = GSheets(_credentials);
   static int _sNumber;
 
   static List<UniversityItem> _unis;
   static List<UniversityReview> _reviews;
+  static List<StudentItem> _students;
+
+  static List<String> languages = [
+    'Portuguese',
+    'German',
+    'English',
+    'French',
+    'Greek',
+    'Spanish',
+    'Romenian',
+    'Estonian',
+    'Finish',
+    'Ukranian',
+    'All'
+  ];
 
   static Future<Worksheet> getTable(int sID) async {
     final ss = await _gsheets.spreadsheet(_ssID);
@@ -38,6 +58,7 @@ class ErasmusDB {
   static fetchData() async {
     _unis = await _fetchUnis();
     _reviews = await _fetchReviews();
+    _students = await fetchStudents();
   }
 
   static Future<void> setValue(int sID, int row, int col, String value) async {
@@ -48,7 +69,7 @@ class ErasmusDB {
   /*_________________________UNIVERSITIES_________________________*/
 
   static Future<List<UniversityItem>> _fetchUnis() async {
-    final db = await getTable(0);
+    final db = await getTable(_idUnis);
 
     final values = (await db.values.allRows()).skip(1).toList();
 
@@ -56,11 +77,11 @@ class ErasmusDB {
   }
 
   static List<UniversityItem> getUnis() {
-    return _unis;
+    return (_unis == null) ? [] : _unis;
   }
 
   static Future<void> addUni(UniversityItem uni) async {
-    final db = await getTable(0);
+    final db = await getTable(_idUnis);
     db.values.appendRow([
       uni.label,
       uni.name,
@@ -74,12 +95,14 @@ class ErasmusDB {
       uni.stars.expenses,
       uni.stars.experience,
       uni.stars.knowledge,
-      uni.imgUrl
+      uni.imgUrl,
+      uni.location.latitude,
+      uni.location.longitude
     ]);
   }
 
   static Future<bool> deleteUni(int index) async {
-    final db = await getTable(0);
+    final db = await getTable(_idUnis);
     return db.deleteRow(index + 2);
   }
 
@@ -102,6 +125,7 @@ class ErasmusDB {
   }
 
   static List<String> getAvailableCountries() {
+    if (_unis == null) return [];
     final list = _unis;
     final set = list.map((e) => e.country).toSet();
     set.add('All');
@@ -109,6 +133,7 @@ class ErasmusDB {
   }
 
   static List<String> getAvailableCourses() {
+    if (_unis == null) return [];
     final list = _unis;
     final set = list.map((e) => e.course).toSet();
     set.add('All');
@@ -116,6 +141,7 @@ class ErasmusDB {
   }
 
   static List<String> getAvailableUniversities() {
+    if (_unis == null) return [];
     final list = _unis;
     final set = list.map((e) => e.label).toSet();
     set.add('');
@@ -134,6 +160,7 @@ class ErasmusDB {
           score.knowledge;
     }
 
+    if (_unis == null) return [];
     final unis2 = _unis;
     unis2.sort((a, b) => (calcScore(b.stars)).compareTo(calcScore(a.stars)));
 
@@ -143,7 +170,7 @@ class ErasmusDB {
   /*_________________________REVIEWS_________________________*/
 
   static Future<List<UniversityReview>> _fetchReviews() async {
-    final db = await getTable(6996890);
+    final db = await getTable(_idReviews);
 
     final values = (await db.values.allRows()).skip(1).toList();
 
@@ -155,7 +182,7 @@ class ErasmusDB {
   }
 
   static Future<void> addReview(UniversityReview review) async {
-    final db = await getTable(6996890);
+    final db = await getTable(_idReviews);
     db.values.appendRow([
       review.uniID,
       review.studentID,
@@ -168,7 +195,7 @@ class ErasmusDB {
   }
 
   static Future<bool> deleteReview(int index) async {
-    final db = await getTable(6996890);
+    final db = await getTable(_idReviews);
     return db.deleteRow(index + 2);
   }
 
@@ -184,4 +211,41 @@ class ErasmusDB {
   }
 
   /*_________________________STUDENTS_________________________*/
+
+  static Future<List<StudentItem>> fetchStudents() async {
+    final db = await getTable(_idStudents);
+
+    final values = (await db.values.allRows()).skip(1).toList();
+
+    return values.map((value) => StudentItem.fromSheets(value)).toList();
+  }
+
+  static List<StudentItem> getStudents() {
+    return (_students == null) ? [] : _students;
+  }
+
+  static Future<void> addStudent(StudentItem student) async {
+    final db = await getTable(_idStudents);
+    final id = (await db.values.lastRow(fromColumn: 1))[0];
+    db.values.appendRow([
+      int.parse(id) + 1,
+      student.studentID,
+      student.inOutgoing,
+      student.language
+    ]);
+  }
+
+  static Future<bool> deleteStudent(int id) async {
+    final db = await getTable(_idStudents);
+    return db.deleteRow(id + 1);
+  }
+
+  static void setStudentValue(int row, int col, String val) {
+    setValue(_idStudents, row + 2, col, val);
+  }
+
+  static Future<int> getNewStudentID() async {
+    final db = await getTable(_idStudents);
+    return int.parse((await db.values.lastRow(fromColumn: 1))[0]) + 1;
+  }
 }

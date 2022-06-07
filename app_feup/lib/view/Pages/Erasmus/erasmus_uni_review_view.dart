@@ -165,6 +165,7 @@ class ErasmusUniversityReviewViewState extends GeneralPageViewState {
                         knowledgeWraper.value,
                         countryWraper.value));
                 postReview(review);
+                Navigator.pop(context);
               }
             },
             child: Padding(

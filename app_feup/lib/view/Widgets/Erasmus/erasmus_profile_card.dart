@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:uni/model/erasmus/erasmus_db.dart';
+import 'package:uni/model/erasmus/studentItem.dart';
 
 class ErasmusProfileCard extends StatefulWidget {
   ErasmusProfileCard({Key key}) : super(key: key);
@@ -8,12 +10,49 @@ class ErasmusProfileCard extends StatefulWidget {
 }
 
 class _ErasmusProfileCardState extends State<ErasmusProfileCard> {
-  bool isErasmusStudent = true;
+  bool isErasmusStudent = false;
   bool isOutgoing = true;
   int selectedValue = 0;
+  bool inDb = false;
+  int sID = 0;
+  bool isInitialization = true;
+
+  bool isDbLoaded = true;
+
+  String getStudentNumber() {
+    return ErasmusDB.getStudentNumber().toString();
+  }
+
+  void updateSID() async {
+    sID = await ErasmusDB.getNewStudentID();
+    await ErasmusDB.fetchStudents();
+    setValuesIfInDB();
+  }
+
+  void setValuesIfInDB() {
+    isInitialization = false;
+    List<StudentItem> students = ErasmusDB.getStudents();
+
+    if (students.isEmpty) isDbLoaded = false;
+
+    students = students
+        .where((elem) => (elem.studentID == getStudentNumber()))
+        .toSet()
+        .toList();
+
+    if (students.isNotEmpty) {
+      sID = int.parse(students[0].id);
+      inDb = true;
+      isErasmusStudent = true;
+      isOutgoing = students[0].inOutgoing == '1' ? true : false;
+      selectedValue = int.parse(students[0].language);
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
+    if (isInitialization) setValuesIfInDB();
+    if (!isDbLoaded) return Text('Problem fetching data...');
     return Card(
         margin: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
         color: Color.fromARGB(0, 0, 0, 0),
@@ -71,8 +110,19 @@ class _ErasmusProfileCardState extends State<ErasmusProfileCard> {
   }
 
   void checkBoxChange(bool boolean) {
+    if (isErasmusStudent) return;
     setState(() {
+      if (!isErasmusStudent && !inDb) {
+        inDb = true;
+        ErasmusDB.addStudent(StudentItem(null, getStudentNumber(),
+            '${isOutgoing ? 1 : 0}', '$selectedValue'));
+        updateSID();
+      }
       isErasmusStudent = !isErasmusStudent;
+      if (!isErasmusStudent) {
+        ErasmusDB.deleteStudent(sID);
+        inDb = false;
+      }
     });
   }
 
@@ -108,6 +158,7 @@ class _ErasmusProfileCardState extends State<ErasmusProfileCard> {
       onChanged: (value) {
         setState(() {
           isOutgoing = value;
+          ErasmusDB.setStudentValue(sID, 3, isOutgoing ? '1' : '0');
         });
       },
       activeTrackColor: Colors.grey,
@@ -120,20 +171,16 @@ class _ErasmusProfileCardState extends State<ErasmusProfileCard> {
   Widget myDropDownButton(BuildContext context) {
     return DropdownButton(
         value: selectedValue,
-        items: [
-          DropdownMenuItem(
-            child: Text('Portuguese'),
-            value: 0,
-          ),
-          DropdownMenuItem(
-            child: Text('English'),
-            value: 1,
-          ),
-          DropdownMenuItem(child: Text('Others'), value: 2),
-        ],
+        items: List.generate(ErasmusDB.languages.length, (index) {
+          return DropdownMenuItem(
+            child: Text(ErasmusDB.languages[index]),
+            value: index,
+          );
+        }),
         onChanged: (value) {
           setState(() {
             selectedValue = value;
+            ErasmusDB.setStudentValue(sID, 4, '$selectedValue');
           });
         });
   }

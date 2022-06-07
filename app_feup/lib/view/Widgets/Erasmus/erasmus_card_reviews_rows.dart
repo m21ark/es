@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:uni/utils/constants.dart' as Constants;
 
 import '../../../model/erasmus/universityReview.dart';
+import '../../Pages/Erasmus/erasmus_uni_page_view.dart';
 import 'erasmus_nav_card.dart';
 
 class ReviewRows extends StatelessWidget {
@@ -36,12 +37,14 @@ class ReviewRows extends StatelessWidget {
     final List<Widget> widgets = [];
 
     items.forEach((element) async {
-      widgets.add(
-        ErasmusReviewCard(
-          element,
-          Constants.navErasmusReviewList,
-        ),
-      );
+      if  (element.uniID == ErasmusUniversityPageViewState.university.value) {
+        widgets.add(
+          ErasmusReviewCard(
+            element,
+            Constants.navErasmusReviewList,
+          ),
+        );
+      }
     });
 
     return widgets;

@@ -93,24 +93,28 @@ class ErasmusUniversityPageViewState extends GeneralPageViewState {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                StarContainer('Expenses', university.stars.expenses, 0),
-                StarContainer('Experience', university.stars.experience, 20),
+                StarContainer('Expenses', university.stars.expenses, 0,
+                    key: Key("key_uni_page_expenses")),
+                StarContainer('Experience', university.stars.experience, 20,
+                    key: Key("key_uni_page_experience")),
               ],
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                StarContainer('Knowledge', university.stars.knowledge, 0),
-                StarContainer('Country', university.stars.country, 20),
+                StarContainer('Knowledge', university.stars.knowledge, 0,
+                    key: Key("key_uni_page_knowledge")),
+                StarContainer('Country', university.stars.country, 20,
+                    key: Key("key_uni_page_country")),
               ],
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 NavButton('See Reviews', gotoErasmusUniReviewList, Colors.white,
-                    Theme.of(context).colorScheme.secondary),
+                    Theme.of(context).colorScheme.secondary, key: Key("key_see_reviews")),
                 NavButton('Make Review', gotoErasmusUniReviewMake,
-                    Theme.of(context).colorScheme.secondary, Colors.grey[300]),
+                    Theme.of(context).colorScheme.secondary, Colors.grey[300], key: Key("key_make_reviews"),),
               ],
             )
           ],

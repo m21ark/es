@@ -17,15 +17,14 @@ You can find here detailed about the product, from a high-level vision to low-le
   * [Logical architecture](docs/ArchitectureAndDesign.md#logical-architecture)
   * [Physical architecture](docs/ArchitectureAndDesign.md#physical-architecture)
   * [Prototype](docs/ArchitectureAndDesign.md#vertical-prototype)
-* [Implementation]
-* [Test]
-* [Configuration and change management]
-* [Project management]
+* [Implementation](app_feup/lib/view/Pages/Erasmus/erasmus_page_view.dart)
+* [Test](app_feup/test_driver/app.dart)
 
 ## Iteration Reports
 
 * [Iteration 1](docs/Iteration_1.md)
 * [Iteration 2](docs/Iteration_2.md)
+* [Iteration 3](docs/Iteration_3.md)
 
 ## Contributions
 

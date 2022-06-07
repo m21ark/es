@@ -20,8 +20,8 @@ class ErasmusMainPageViewState extends GeneralPageViewState {
 
   @override
   Widget getBody(BuildContext context) {
-
     ErasmusDB.fetchStudentInfo();
+    ErasmusDB.fetchStudents();
 
     final MediaQueryData queryData = MediaQuery.of(context);
     return ListView(

@@ -15,7 +15,7 @@ Being logged in is a precondition to all the cases bellow.
 | *Description* | The user can find other Erasmus students.|
 | *Preconditions* | The user doesn't need to register as an Erasmus student in the app to use this feature, but only Erasmus students will appear on the list. |
 | *Postconditions* | N/A |
-| *Normal flow* | 1. The user accesses the Erasmus section of the app.<br> 2. The system asks the user to confirm if he is indeed an Erasmus student, in case he hasn't accepted before. <br> 3. The system shows the list of other students and some information regarding them. (email and name)|
+| *Normal flow* | 1. The user accesses the Erasmus section of the app.<br> 2. The system shows the list of other students and some information regarding them. (Image, number and prefered language)|
 | *Alternative flows and exceptions* | N/A |
 
 <br><br>
@@ -48,16 +48,16 @@ Being logged in is a precondition to all the cases bellow.
 
 <br><br>
 
-#### Discover cities' places of interest
+#### Be found by other Students
 
 |||
 | --- | --- |
-| *Name* | Discover cities' places of interest |
+| *Name* | Be found by other Students |
 | *Actor* |  Student | 
-| *Description* | The student is presented with a list of useful and historical places in a specific city |
+| *Description* | The student is shown in a list and can be found by other erasmus candidates students. The student can select his prefered language and the status of his erasmus ecperience (if it is an ingoing or outgoing student) |
 | *Preconditions* | N/A |
 | *Postconditions* | N/A |
-| *Normal flow* | The student opens a city's page inside the app. Then a list with the most significant places in that city are shown with an image and some key information (like location) |
+| *Normal flow* | 1. The student changes his information in the settings, and enables the erasmus student option. <br> 2. He then can be found in the erasmus students page with the information that he chose |
 | *Alternative flows and exceptions* | N/A |
 
 <br><br>

@@ -2,7 +2,6 @@
 
 ## Members
 
-- Eva Filipa da Silva Correia Carvalho - up202006379
 - João Ricardo Alves - up202007614
 - Marco André Rocha - up202004891
 - Matilde Pinho Borges Sequeira - up202007623
@@ -15,7 +14,7 @@
 
 ## Vision Stament
 
-Is it difficult for you to find help about Erasmus programs? Erasmus Unite will make it easier and more fun than endlessly scrolling hundreds or thousands of pages, you just need a phone a finger and we'll do the magic.
+Did you ever find Erasmus' information overwhelming and confusing? Erasmus Unite is the magical must have app for any student craving the Erasmus experience. Effortlessly, everything you might need can be quickly found. That includes all paperwork needed to enroll, finding universities with previous students reviews and connecting with other students sharing your interests.
 
 <br>
 
@@ -23,16 +22,11 @@ Is it difficult for you to find help about Erasmus programs? Erasmus Unite will 
 
 ### Ingoing
  - Find other Erasmus students
- - Discover Porto
 
 ### Outgoing
  - Show destination options
  - University and City Reviews
  - Paperwork 
- - Lodging
- 
-### Other low priority features
- - Include foreign exchange students from other mobility projects
 
 <br>
 

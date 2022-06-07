@@ -22,7 +22,7 @@ class ErasmusReviewListViewState extends GeneralPageViewState {
   Widget getBody(BuildContext context) {
     getReviews();
     return ListView(
-      key: Key('key_Universities List'),
+      key: Key("key_reviews_list"),
       children: <Widget>[ReviewRows(items: reviews)],
     );
   }

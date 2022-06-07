@@ -45,7 +45,7 @@ SentryEvent beforeSend(SentryEvent event) {
 }
 
 Future<void> main() async {
-  await ErasmusDB.fetchData();
+  ErasmusDB.fetchData();
 
   OnStartUp.onStart(state);
   await SentryFlutter.init(
