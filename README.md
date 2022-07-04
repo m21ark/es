@@ -1,5 +1,7 @@
 # Erasmus Unite Development Report
 
+This project is a fork from https://github.com/NIAEFEUP/project-schrodinger for our Software Engineering class.
+
 Welcome to the documentation pages of the Erasmus Unite!
 
 You can find here detailed about the product, from a high-level vision to low-level implementation decisions, a kind of Software Development Report, organized by discipline (as of RUP):
@@ -33,6 +35,7 @@ So far, contributions are exclusively made by the initial team, but we hope to o
 Please contact us!
 
 Thank you!
+
 
 ## Team
 
